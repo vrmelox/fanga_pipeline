@@ -1,6 +1,6 @@
 {
-  "date_execution": "2026-02-19T21:30:27.716215",
-  "total_fichiers": 10,
+  "date_execution": "2026-02-19T22:00:58.631469",
+  "total_fichiers": 1,
   "classes": {
     "Contrats": 1,
     "Factures": 0,
@@ -14,73 +14,10 @@
   },
   "fichiers": [
     {
-      "nom_original": "facture_station_cocody_mars.pdf",
-      "nom_final": "",
-      "categorie": "",
-      "confiance": 0.0,
-      "statut": "succes"
-    },
-    {
-      "nom_original": "photo_station_plateau_01.jpg",
-      "nom_final": "",
-      "categorie": "",
-      "confiance": 0.0,
-      "statut": "succes"
-    },
-    {
-      "nom_original": "export_transactions_fevrier.csv",
-      "nom_final": "",
-      "categorie": "",
-      "confiance": 0.0,
-      "statut": "succes"
-    },
-    {
-      "nom_original": "rapport_mensuel_conducteurs.xlsx",
-      "nom_final": "",
-      "categorie": "",
-      "confiance": 0.0,
-      "statut": "succes"
-    },
-    {
-      "nom_original": "screenshot_app_bug.png",
-      "nom_final": "",
-      "categorie": "",
-      "confiance": 0.0,
-      "statut": "succes"
-    },
-    {
-      "nom_original": "carte_identite_yacouba.png",
-      "nom_final": "",
-      "categorie": "",
-      "confiance": 0.0,
-      "statut": "succes"
-    },
-    {
-      "nom_original": "maintenance_batterie_ST-002.docx",
-      "nom_final": "",
-      "categorie": "",
-      "confiance": 0.0,
-      "statut": "succes"
-    },
-    {
-      "nom_original": "planning_equipe_avril.pdf",
-      "nom_final": "",
-      "categorie": "",
-      "confiance": 0.0,
-      "statut": "succes"
-    },
-    {
-      "nom_original": "bon_de_commande_motos.pdf",
-      "nom_final": "",
-      "categorie": "",
-      "confiance": 0.0,
-      "statut": "succes"
-    },
-    {
-      "nom_original": "contrat_aissata_kone_2024.pdf",
-      "nom_final": "2026-02-19_Contrats_contrat-aissata-kone-2024.pdf",
+      "nom_original": "2026-02-19_Autre_2026-02-19-a-verifier-2026-02-19-a-verifier-2026-02-19-a-verifier-2026-02-19-a-verifier-docdgepldkd.txt",
+      "nom_final": "2026-02-19_Contrats_2026-02-19-autre-2026-02-19-a-verifier-2026-02-19-a-verifier-2026-02-19-a-verifier-2026-02-19-a-verifier-docdgepldkd.txt",
       "categorie": "Contrats",
-      "confiance": 1.0,
+      "confiance": 0.88,
       "statut": "succes"
     }
   ],

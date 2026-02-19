@@ -55,10 +55,17 @@ class ClaudeClassifier:
         self.threshold = threshold
 
     def _build_user_prompt(self, record: FileRecord) -> str:
+        contenu = ""
+        try:
+            with open(record.path, "r", encoding="utf-8") as f:
+                contenu = f.read(1000)  # on limite à 1000 caractères
+        except Exception:
+            contenu = "Contenu non lisible"
         return f"""Fichier à classifier :
         - Nom original : {record.name}
         - Extension : {record.extension}
-        - Taille : {record.size} octets"""
+        - Taille : {record.size} octets
+        - Contenu : {contenu}"""
 
     def _parse_response(self, text: str) -> dict:
         try:
@@ -72,6 +79,7 @@ class ClaudeClassifier:
 
     def classify(self, record: FileRecord) -> FileRecord:
         try:
+            print("CLAUDE EN COURRRRRRS")
             response = self.client.messages.create(
                 model="claude-opus-4-6",
                 max_tokens=200,
@@ -81,7 +89,8 @@ class ClaudeClassifier:
                     "content": self._build_user_prompt(record)
                 }]
             )
-
+            print("Claude est sorti")
+            print(response.content[0].text)
             result = self._parse_response(response.content[0].text)
 
             record.categorie = result["categorie"]
@@ -93,5 +102,6 @@ class ClaudeClassifier:
             record.confiance = 0.0
             record.description_courte = "erreur-classification"
             record.erreur = str(e)
+            print(f"ERREUR CLAUDE : {e}") 
 
         return record

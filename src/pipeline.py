@@ -98,14 +98,16 @@ class Pipeline:
         
         self._load_files()
         print(f"{len(self.records)} fichiers détectés")
-    
+        if len(self.records) == 0:
+            print("Aucun fichier à traiter")
+            return
         for record in self.records:
             print(f"Traitement : {record.name}")
+            self._classify(record)
+            self._rename(record)
+            self._move(record)
+            print(f"→ {record.categorie} (confiance : {record.confiance}) — {record.nom_final}")    
         
-        self._classify(record)
-        self._rename(record)
-        self._move(record)
-        print(f"→ {record.categorie} (confiance : {record.confiance}) — {record.nom_final}")    
         self._generate_report()
         print(f"Pipeline terminé. Rapport généré dans {self.output_folder}")
     
