@@ -58,7 +58,7 @@ class ClaudeClassifier:
         contenu = ""
         try:
             with open(record.path, "r", encoding="utf-8") as f:
-                contenu = f.read(1000)  # on limite à 1000 caractères
+                contenu = f.read(1000) 
         except Exception:
             contenu = "Contenu non lisible"
         return f"""Fichier à classifier :
