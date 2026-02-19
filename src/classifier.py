@@ -81,7 +81,7 @@ class ClaudeClassifier:
         try:
             print("CLAUDE EN COURRRRRRS")
             response = self.client.messages.create(
-                model="claude-opus-4-6",
+                model="claude-sonnet-4-6",
                 max_tokens=200,
                 system=SYSTEM_PROMPT,
                 messages=[{
